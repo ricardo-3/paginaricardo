@@ -1,6 +1,8 @@
 *{margin: 0;
   padding: 0;
-  box-sizing: border-box;}
+  box-sizing: border-box;
+  cursor: pointer;
+}
 body{font-family: 'Roboto', sans-serif;}  
 
 header{background:black;
@@ -17,8 +19,7 @@ header label{display: none;
              transition: all 500ms ease;
             }      
 
-header label:hover{cursor: pointer;
-                  background-color: rgba(255, 255, 255, 0.3) ;}  
+header label:hover{background-color: rgba(255, 255, 255, 0.2) ;}  
                               
 
 .menu ul{display: flex;
@@ -26,24 +27,26 @@ header label:hover{cursor: pointer;
          list-style: none;}
 
 .menu li a{text-decoration: none;
+           margin-top:20px ;
            color: white;
-           padding: 15px 30px;
+           padding: 12px 30px;
            display: block;
-           transition: all 500ms ease;
+           transition: all 600ms ease;
            border: 1px solid black;
            border-radius: 50px;
 }
-.menu li a:hover{background: rgba(255, 255, 255, 0.3) ;
-                 color: white;
+.menu li a:hover{  background: linear-gradient(to bottom, #abbaab, #ffffff);
+                 color: black;
+                 transform:translatey(-20%) ;
 }
 
 main{background: black ;
      width: 100%;
-     height: 50rem;
+     height: 45rem;
      display: flex;}
 
 .texto{color: white;
-       margin: 5rem auto; 
+       margin: 8rem auto; 
        width: 50%;
        height: 20rem;
        display: flex;
@@ -55,49 +58,95 @@ main{background: black ;
        
 .texto p{font-size: 25px;
          margin-top: 50px;
-        text-align: justify;}
+         text-align: justify;}
 
       
+.section{width: 100%;
+         height: 570px;
+         margin-top: 7rem;
 
-section{background: #f0ece3;
-        width: 100%;
-        height: 50rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;}
-
-.carem{background: yellow;
-       width: 500px;
-       height: 20rem;
-       display: inline-block;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
 }
+                                       
+.contenedor{width: 25%;
+            height: 450px;
+            margin: 20px 15px; 
+            overflow: hidden;  }
 
-.carem a{color: white;
-         width: 50%;
-         padding: 10px;
-         border: 1px solid black;
-         
-         border-radius: 10%;}
-.carem a .butoon{margin-top:50px 0 0 0;}         
+.contenedor img{width: 100%;
+                height: 380px;
+                border-radius: 4px;
+                 } 
+.box-datos{width: 100%;
+           height: 250px;
+           background-color: black;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+           color: white;
+           transition: 1.7s;}                            
+                      
+.box-datos h2{font-size: 1em;
+               margin: 0 0 25px 0;}
 
-.section .foto{max-width: 200px;}
-              
+.box-datos p{font-size: 13px;}
+
+.box-datos h2, p{text-align: center; }
+
+.box-datos p{text-align: justify;
+              width: 90%;}
 
 
-       
+.box-datos a{margin: 25px 0 0 0;
+             padding: 5px;
+             text-decoration: none;
+             color: white;
+             border: 1px solid white;
+             border-radius: 50px;}
+
+
+.box-datos a:hover{background:linear-gradient(to bottom, #abbaab, #ffffff);
+                   color:black;}              
+             
+.contenedor:hover .box-datos{transform: translateY(-175px);}             
            
  
            
-        
+@media screen and (max-width:1197px){
+  .contenedor{width: 35%;
+              margin: 15px;}
+}        
            
 
+@media screen and (max-width:1024px){
+  .contenedor{width: 30%;
+              margin: 15px;}
+}
 
 
+@media screen and (max-width:800px){
+.contenedor{width: 50%;
+            margin: 15px;}
+}
+
+@media screen and (max-width:768px){
+  .contenedor{width: 40%;
+              margin: 15px;}
+              .main{width: 100%;
+                height: 40rem;}
+        .texto h1{font-size: 65px;
+                  text-align: center;
+        }
+        .texto p{font-size:20px;
+                 text-align:justify ;}
+  }
 
 
-
-@media(max-width:780px){
+@media (max-width:780px){
   header label{display: block;}
 
   .menu{position: absolute;
@@ -114,7 +163,31 @@ section{background: #f0ece3;
              border-radius: 0;}
 
  #btn-menu:checked ~ .menu{margin: 0;}
-   
+ 
 }
 
+@media screen and (max-width:600px){
+  .contenedor{width: 40%;
+              margin: 20px 10px ;}
+              .main{width: 100%;
+                      height: 30rem;}
+              .texto h1{font-size: 40px;
+                        text-align: center;
+              }
+              .texto p{font-size:20px;
+                       text-align:justify ;}
+              
+  }
+
+@media screen and (max-width:414px){
+  .contenedor{width: 100%;
+              margin: 20px 0;}
+              
+  }
+
+  
+@media screen and (max-width:360px){
+  .contenedor{width: 100%;
+              margin: 20px 0;}
+  }
 
